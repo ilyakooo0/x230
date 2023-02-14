@@ -142,7 +142,7 @@ view maybeUrl sharedModel model static =
     , body =
         column [ spacing 40 ]
             [ el [ height (px 200) ] none
-            , textColumn [ spacing 8 ]
+            , textColumn [ spacing 8, width fill ]
                 [ paragraph Galmuri.title [ text "ThinkPad X230 (Hacker Edition)" ]
                 , paragraph
                     (Galmuri.galmuri11 1
@@ -226,7 +226,7 @@ price model =
 
 para : String -> List (List (Element msg)) -> Element msg
 para heading txts =
-    textColumn [ spacing 12 ] <|
+    textColumn [ spacing 12, width fill ] <|
         paragraph Galmuri.subtitle [ text heading ]
             :: List.map
                 (paragraph
